@@ -1,3 +1,3 @@
 # BDSpyrunner
 ![logo](logo.png)
-[Wiki](https://github.com/twoone-3/BDSpyrunner/wiki)
+[Wiki](https://github.com/jfishing/BDSpyrunner-1/wiki)
