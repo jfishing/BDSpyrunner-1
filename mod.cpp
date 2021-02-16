@@ -338,7 +338,7 @@ api_function(getActorInfoEx) {
 	if (PyArg_ParseTuple(args, "K:getActorInfoEx", &a)) {
 		if (!a)
 			return Py_False;
-		Tag* t = a->save();
+		CompoundTag* t = a->save();
 		string info = toJson(t).toStyledString();
 		t->deCompound();
 		delete t;

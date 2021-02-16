@@ -100,8 +100,8 @@ struct ItemStackBase {
 			this, &ct);
 		return ct;
 	}
-	Tag* save() {
-		Tag* t = 0;
+	CompoundTag* save() {
+		CompoundTag* t = 0;
 		SYMCALL("?save@ItemStackBase@@QEBA?AV?$unique_ptr@VCompoundTag@@U?$default_delete@VCompoundTag@@@std@@@std@@XZ",
 			this, &t);
 		return t;
@@ -202,10 +202,10 @@ struct Actor {
 		f(int, hattr + 128) = max;
 		//SYMCALL("?_setDirty@AttributeInstance@@AEAAXXZ", hattr);
 	}
-	Tag* save() {
+	CompoundTag* save() {
 		Tag* t = newTag(Compound);
 		SYMCALL("?save@Actor@@UEAA_NAEAVCompoundTag@@@Z", this, t);
-		return t;
+		return (CompoundTag*) t;
 	}
 };
 struct Mob : Actor {
